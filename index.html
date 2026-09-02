@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="InConti Health Care — affordable adult incontinence support. Clear pricing, multiple sizes and high-absorbency options in Krugersdorp and Roodepoort.">
+<title>InConti Health Care | Comfort. Confidence. Dignity.</title>
+<style>
+:root{
+  --navy:#173f5f;
+  --blue:#1e7191;
+  --teal:#49a7ad;
+  --mint:#e8f6f5;
+  --paper:#fff;
+  --cream:#f8fbfa;
+  --ink:#29465b;
+  --muted:#66808e;
+  --line:#d6e8e8;
+  --green:#25d366;
+  --green-dark:#159447;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  font-family:"Trebuchet MS",Arial,sans-serif;
+  background:
+    radial-gradient(circle at 10% 0%,rgba(73,167,173,.16),transparent 32rem),
+    linear-gradient(180deg,#f1faf9 0%,#fff 48%,#f5faf9 100%);
+}
+.wrap{width:min(1080px,calc(100% - 30px));margin:auto}
+.hero{padding:28px 0 34px}
+.hero-card{
+  position:relative;overflow:hidden;
+  border-radius:30px;
+  background:linear-gradient(135deg,#e1f3f2 0%,#f8fcfc 55%,#d9eef1 100%);
+  border:1px solid var(--line);
+  box-shadow:0 18px 50px rgba(23,63,95,.10);
+  padding:38px clamp(25px,6vw,64px);
+}
+.hero-card:after{
+  content:"";
+  position:absolute;width:270px;height:270px;border-radius:50%;
+  right:-95px;top:-100px;background:rgba(73,167,173,.16);
+}
+.brand{position:relative;z-index:1;font-size:clamp(2.1rem,7vw,4.6rem);font-weight:900;letter-spacing:-.06em;color:var(--navy)}
+.brand span{color:var(--teal)}
+.tagline{position:relative;z-index:1;margin-top:5px;color:var(--blue);font-weight:900;letter-spacing:.16em;font-size:.9rem}
+.hero-copy{position:relative;z-index:1;max-width:640px;margin:20px 0 0;font-size:1.15rem}
+.hero-copy strong{color:var(--navy)}
+.hero-actions{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:11px;margin-top:23px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:47px;padding:12px 19px;border-radius:999px;
+  text-decoration:none;font-weight:900;border:2px solid transparent
+}
+.btn-whatsapp{background:var(--green);color:white}
+.btn-whatsapp:hover{background:var(--green-dark)}
+.btn-call{background:white;color:var(--navy);border-color:#b9d9dc}
+.ribbon{
+  margin:-1px auto 0;position:relative;z-index:2;
+  width:fit-content;max-width:100%;
+  padding:10px 22px;border-radius:0 0 16px 16px;
+  background:var(--navy);color:white;text-align:center;
+  font-size:.84rem;font-weight:900;letter-spacing:.07em
+}
+main{padding:22px 0 65px}
+.heading{text-align:center;margin:22px auto 28px}
+.heading h1{margin:0;color:var(--navy);font-size:clamp(1.8rem,4vw,2.8rem)}
+.heading p{margin:7px 0;color:var(--muted)}
+.products{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px
+}
+.product{
+  position:relative;overflow:hidden;background:var(--paper);
+  border:1px solid var(--line);border-radius:23px;padding:24px;
+  box-shadow:0 10px 30px rgba(23,63,95,.07);
+}
+.product:nth-child(3){background:linear-gradient(145deg,#f1faf9,#fff)}
+.badge{
+  display:inline-block;padding:6px 10px;border-radius:999px;
+  background:#e2f3f2;color:var(--blue);font-size:.72rem;font-weight:900;letter-spacing:.1em
+}
+.product h2{margin:11px 0 3px;color:var(--navy);font-size:1.45rem}
+.absorb{font-size:.92rem;color:var(--muted);font-weight:700}
+.price-row{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-top:15px}
+.price{font-size:2.35rem;line-height:1;color:var(--blue);font-weight:900}
+.pack{font-weight:900;font-size:.88rem;text-align:right}
+.sizes{margin:17px 0 20px;padding-top:14px;border-top:1px dashed #c8dddd;color:var(--muted);font-weight:700}
+.product .btn{width:100%}
+.support{grid-column:1/-1}
+.contact{
+  margin-top:30px;padding:30px;border-radius:27px;
+  background:var(--navy);color:white;box-shadow:0 15px 40px rgba(23,63,95,.16)
+}
+.contact h2{margin:0;color:white;font-size:clamp(1.5rem,4vw,2.2rem)}
+.contact p{color:#dcecef}
+.contacts{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:21px 0}
+.person{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);border-radius:17px;padding:18px}
+.person strong{display:block;font-size:1.15rem;margin-bottom:4px}
+.person a{color:white;font-size:1.2rem;font-weight:900;text-decoration:none}
+.person .place{color:#cbe0e5;margin-top:3px}
+.person .wa{display:inline-flex;margin-top:12px;padding:8px 13px;border-radius:999px;background:var(--green);color:white;font-size:.88rem}
+footer{padding:0 0 35px;text-align:center;color:var(--muted);font-size:.85rem}
+@media(max-width:700px){
+  .products{grid-template-columns:1fr}
+  .support{grid-column:auto}
+  .contacts{grid-template-columns:1fr}
+  .hero-card{padding:31px 23px}
+  .brand{letter-spacing:-.05em}
+  .price-row{align-items:center}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-card">
+      <div class="brand">InConti <span>HEALTH CARE</span></div>
+      <div class="tagline">COMFORT. CONFIDENCE. DIGNITY.</div>
+      <p class="hero-copy"><strong>Affordable adult incontinence support</strong> for everyday peace of mind.</p>
+      <div class="hero-actions">
+        <a class="btn btn-whatsapp" href="https://wa.me/27829046871?text=Hi%20Johan%2C%20I%27d%20like%20to%20enquire%20about%20InConti%20products." target="_blank" rel="noopener">💬 WhatsApp Johan</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/27827728749?text=Hi%20Dawie%2C%20I%27d%20like%20to%20enquire%20about%20InConti%20products." target="_blank" rel="noopener">💬 WhatsApp Dawie</a>
+      </div>
+    </div>
+    <div class="ribbon">CALL TODAY • FRIENDLY, DISCREET SERVICE</div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="heading">
+      <h1>Choose the fit that works for you</h1>
+      <p>Clear pricing • Multiple sizes • High-absorbency options</p>
+    </section>
+
+    <section class="products">
+      <article class="product">
+        <span class="badge">BEST VALUE</span>
+        <h2>COMFORT PULL-UPS</h2>
+        <div class="price-row"><div class="price">R100</div><div class="pack">PACK OF 10</div></div>
+        <div class="sizes">Small • Medium • Large • XLarge</div>
+        <a class="btn btn-whatsapp" href="https://wa.me/27829046871?text=Hi%20Johan%2C%20I%27m%20interested%20in%20the%20Comfort%20Pull-Ups%20(R100%20per%20pack)." target="_blank" rel="noopener">💬 Enquire on WhatsApp</a>
+      </article>
+
+      <article class="product">
+        <span class="badge">SECURE FIT</span>
+        <h2>CERTAINTY SLIPS</h2>
+        <div class="price-row"><div class="price">R105</div><div class="pack">PACK OF 10</div></div>
+        <div class="sizes">Small • Medium • Large • XLarge • XXLarge</div>
+        <a class="btn btn-whatsapp" href="https://wa.me/27827728749?text=Hi%20Dawie%2C%20I%27m%20interested%20in%20the%20Certainty%20Slips%20(R105%20per%20pack)." target="_blank" rel="noopener">💬 Enquire on WhatsApp</a>
+      </article>
+
+      <article class="product">
+        <span class="badge">EXTRA PROTECTION</span>
+        <h2>8-drop Extra High Absorbency</h2>
+        <div class="absorb">Support pads</div>
+        <div class="price-row"><div class="price">R580</div><div class="pack">PACK OF 50</div></div>
+        <div class="sizes">Extra high absorbency</div>
+        <a class="btn btn-whatsapp" href="https://wa.me/27829046871?text=Hi%20Johan%2C%20I%27m%20interested%20in%20the%208-drop%20Extra%20High%20Absorbency%20pack%20(R580)." target="_blank" rel="noopener">💬 Enquire on WhatsApp</a>
+      </article>
+
+      <article class="product">
+        <span class="badge">SUPPORT PADS</span>
+        <h2>OVERFLOW FULL PADS</h2>
+        <div class="price-row"><div class="price">R80</div><div class="pack">PACK OF 10</div></div>
+        <div class="sizes">Comfortable everyday support</div>
+        <a class="btn btn-whatsapp" href="https://wa.me/27827728749?text=Hi%20Dawie%2C%20I%27m%20interested%20in%20the%20Overflow%20Full%20Pads%20(R80%20per%20pack)." target="_blank" rel="noopener">💬 Enquire on WhatsApp</a>
+      </article>
+
+      <article class="product support">
+        <span class="badge">LIGHT SUPPORT</span>
+        <h2>LIGHT URINARY PADS</h2>
+        <div class="price-row"><div class="price">R75</div><div class="pack">PACK OF 20</div></div>
+        <div class="sizes">Light urinary support</div>
+        <a class="btn btn-whatsapp" href="https://wa.me/27829046871?text=Hi%20Johan%2C%20I%27m%20interested%20in%20the%20Light%20Urinary%20Pads%20(R75%20per%20pack)." target="_blank" rel="noopener">💬 Enquire on WhatsApp</a>
+      </article>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Need help choosing? Contact us today</h2>
+      <p>Friendly assistance • Discreet service • Affordable support</p>
+      <div class="contacts">
+        <div class="person">
+          <strong>Johan</strong>
+          <a href="tel:+27829046871">082 904 6871</a>
+          <div class="place">Krugersdorp</div>
+          <a class="wa" href="https://wa.me/27829046871" target="_blank" rel="noopener">💬 WhatsApp</a>
+        </div>
+        <div class="person">
+          <strong>Dawie</strong>
+          <a href="tel:+27827728749">082 772 8749</a>
+          <div class="place">Roodepoort</div>
+          <a class="wa" href="https://wa.me/27827728749" target="_blank" rel="noopener">💬 WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>InConti Health Care</footer>
+</body>
+</html>
